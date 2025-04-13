@@ -14,6 +14,7 @@ export default function App(): React.JSX.Element {
         <FlatList
           data={books}
           keyExtractor={book => book.id}
+          contentContainerClassName="gap-5"
           renderItem={({ item: book }) => <BookTile Book={book} />}
         />
       </View>

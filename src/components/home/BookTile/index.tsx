@@ -10,7 +10,7 @@ interface props {
 
 const BookTile = ({ Book }: props) => {
   return (
-    <View className="flex flex-row items-center justify-between gap-2 p-4 w-fit">
+    <View className="flex flex-row items-center justify-between gap-2 w-fit">
       <View className="flex flex-row gap-4 items-center">
         <Image
           source={{ uri: Book.thumbnail_url }}
