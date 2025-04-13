@@ -6,10 +6,8 @@ import { books } from './utils/dummyData/dummyBooks';
 import BookTile from './src/components/home/BookTile';
 
 export default function App(): React.JSX.Element {
-  const unusedVar = 'test';
-
   return (
-    <View className="bg-slate-950 justify-center flex-1">
+    <View className="bg-slate-800 justify-center flex-1">
       <View className=" w-11/12 mx-auto justify-center ">
         <FlatList
           data={books}
