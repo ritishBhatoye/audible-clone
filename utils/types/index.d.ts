@@ -1,4 +1,4 @@
-interface DummyBookDataType {
+interface BookDataType {
   id: string;
   title: string;
   author: string;
