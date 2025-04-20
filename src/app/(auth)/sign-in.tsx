@@ -76,7 +76,7 @@ export default function Page() {
           </View>
 
           <TouchableOpacity
-            className="w-full bg-blue-600 p-4 rounded-lg mt-6"
+            className="w-full bg-audible-500 p-4 rounded-lg mt-6"
             onPress={onSignInPress}
           >
             <Text className="text-white text-center font-semibold">
@@ -88,7 +88,7 @@ export default function Page() {
         <View className="flex-row justify-center items-center mt-6 gap-2">
           <Text className="text-gray-400">Don't have an account?</Text>
           <Link href="/sign-up">
-            <Text className="text-blue-400 font-semibold ml-1">Sign up</Text>
+            <Text className="text-audible-500 font-semibold ml-1">Sign up</Text>
           </Link>
         </View>
       </View>
