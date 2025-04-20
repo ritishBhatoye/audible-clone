@@ -3,11 +3,18 @@
   "compilerOptions": {
     "strict": true,
     "allowJs": true,
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-native",
-    "lib": ["es2017", "dom"],
+  "paths":{
+    "@/*":["src/*"]
+  },
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
@@ -32,6 +39,7 @@
   ],
   "include": [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "nativewind-env.d.ts"
   ]
 }
