@@ -7,7 +7,9 @@ const theme = {
   ...DarkTheme,
   colors: {
     ...DarkTheme.colors,
-    background: 'red',
+    background: '#010D1A',
+    card: '#010D1A',
+    primary: 'white',
   },
 };
 

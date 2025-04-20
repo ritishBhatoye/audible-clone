@@ -8,7 +8,7 @@ const App = () => {
   return (
     <FlatList
       data={books}
-      contentContainerClassName="p-2 gap-4"
+      contentContainerClassName="p-4 gap-4"
       renderItem={({ item }) => <BookTile Book={item} />}
     />
   );
