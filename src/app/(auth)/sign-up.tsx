@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useSignUp } from '@clerk/clerk-expo';
-import { Link, useRouter } from 'expo-router';
+import { Link } from 'expo-router';
 
-export default function SignUpScreen() {
+export default function SignUpScreen(): React.JSX.Element {
   const { isLoaded, signUp, setActive } = useSignUp();
-  const router = useRouter();
 
   const [emailAddress, setEmailAddress] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -15,8 +14,6 @@ export default function SignUpScreen() {
   // Handle submission of sign-up form
   const onSignUpPress = async () => {
     if (!isLoaded) return;
-
-    console.log(emailAddress, password);
 
     // Start sign-up process using email and password provided
     try {
@@ -88,8 +85,8 @@ export default function SignUpScreen() {
             </View>
 
             <TouchableOpacity
-              className="w-full bg-blue-600 p-4 rounded-lg mt-6"
-              onPress={onVerifyPress}
+              className="w-full bg-audible-500 p-4 rounded-lg mt-6"
+              onPress={() => onVerifyPress}
             >
               <Text className="text-white text-center font-semibold">
                 Verify Email
@@ -138,8 +135,8 @@ export default function SignUpScreen() {
           </View>
 
           <TouchableOpacity
-            className="w-full bg-blue-600 p-4 rounded-lg mt-6"
-            onPress={onSignUpPress}
+            className="w-full bg-audible-500 p-4 rounded-lg mt-6"
+            onPress={() => onSignUpPress}
           >
             <Text className="text-white text-center font-semibold">
               Create Account
@@ -150,7 +147,7 @@ export default function SignUpScreen() {
         <View className="flex-row justify-center items-center mt-6 gap-2">
           <Text className="text-gray-400">Already have an account?</Text>
           <Link href="/sign-in">
-            <Text className="text-blue-400 font-semibold ml-1">Sign in</Text>
+            <Text className="text-audible-400 font-semibold ml-1">Sign in</Text>
           </Link>
         </View>
       </View>

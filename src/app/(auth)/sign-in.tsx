@@ -1,11 +1,10 @@
 import { useSignIn } from '@clerk/clerk-expo';
-import { Link, useRouter } from 'expo-router';
+import { Link } from 'expo-router';
 import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 
-export default function Page() {
+export default function SignIn(): React.JSX.Element {
   const { signIn, setActive, isLoaded } = useSignIn();
-  const router = useRouter();
 
   const [emailAddress, setEmailAddress] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -77,7 +76,7 @@ export default function Page() {
 
           <TouchableOpacity
             className="w-full bg-audible-500 p-4 rounded-lg mt-6"
-            onPress={onSignInPress}
+            onPress={() => onSignInPress}
           >
             <Text className="text-white text-center font-semibold">
               Sign In

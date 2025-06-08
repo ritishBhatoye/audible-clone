@@ -4,9 +4,14 @@ import { Redirect, Tabs } from 'expo-router';
 
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '@clerk/clerk-react';
+import { ActivityIndicator } from 'react-native';
 
-const TabsLayout = () => {
-  const { isSignedIn } = useAuth();
+const TabsLayout = (): React.JSX.Element => {
+  const { isSignedIn, isLoaded } = useAuth();
+
+  if (!isLoaded) {
+    return <ActivityIndicator />;
+  }
 
   if (!isSignedIn) {
     return <Redirect href="/sign-in" />;
