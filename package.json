@@ -17,7 +17,7 @@
     "@clerk/clerk-expo": "^2.9.14",
     "@clerk/clerk-react": "^5.28.2",
     "@react-navigation/native": "^7.1.6",
-    "expo": "^53.0.0",
+    "expo": "~52.0.43",
     "expo-auth-session": "~6.0.3",
     "expo-constants": "~17.0.8",
     "expo-linking": "~7.0.5",
